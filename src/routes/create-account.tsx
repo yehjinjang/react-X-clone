@@ -33,6 +33,11 @@ opacity: 0.8;
 const Title = styled.h1`
 font_size: 42px;`;
 
+const Error = styled.span`
+font-weight:600;
+color: tomato;
+`;
+
 export default function CreateAccount(){
     const [isLoading, setIsLoading] = useState(false);
     const [name, setName] = useState("");
@@ -77,6 +82,7 @@ export default function CreateAccount(){
             value = {isLoading? "Loading..." : "Create Account"}
             />
         </Form>
+        {error !== "" ? <Error>{error}</Error>:null}
     </Wrapper>
 }
 
