@@ -20,7 +20,7 @@ const router = createBrowserRouter([
     ),
     children: [
       {
-        path:"",
+        path: "/",
         element: <Home />,
       },
       {
@@ -37,7 +37,11 @@ const router = createBrowserRouter([
   {
     path:"/create-account",
     element: <CreateAccount />,
-  }
+  },
+  {
+    path:"*", //if not exist handling
+    element: <h1>404 Not Found</h1>
+  },
 
 ]);
 
